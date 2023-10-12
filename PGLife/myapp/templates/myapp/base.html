@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'myapp/css/all.min.css' %} ">
+    <link rel="stylesheet" href="{% static 'myapp/css/bootstrap.css' %} ">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Satisfy&display=swap" rel="stylesheet">
+   {% block myappcss %}
+   
+     <link rel="stylesheet" href="{% static 'myapp/css/style.css' %} ">
+   
+   {% endblock myappcss %}
+   
+
+    <title>PGLife</title>
+</head>
+<body>
+    {% include 'myapp/navbar.html' %}
+    {% include 'myapp/banner.html' %}
+
+    {% block content %}
+    
+    {% endblock content %}
+   
+    {% include 'myapp/footer.html' %}
+
+    <script src=" {% static 'myapp/js/jquery.js' %} "></script>
+    <script src=" {% static 'myapp/js/popper.js' %} "></script>
+    <script src=" {% static 'myapp/js/all.min.js' %} "></script>
+    <script src=" {% static 'myapp/js/bootstrap.js' %} "></script>
+
+    
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h5>This is home template file </h5>
+     <a href=" {% url 'detail' 1 %} ">Student 1</a>
+     <a href=" {% url 'detail' 2 %} ">Student 2</a>
+     <a href=" {% url 'detail' 3 %} ">Student 3</a>
+     
+    <br><br><br>
+     <a href=" {% url 'subdetail' 1 5  %} "> Sub Student 5</a>
+     <a href=" {% url 'subdetail' 2 6 %} "> Sub Student 6</a>
+     <a href=" {% url 'subdetail' 3 7 %} "> Sub Student 7</a>
+
+    </body>
+</html>

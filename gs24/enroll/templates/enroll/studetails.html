@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        th,td{
+            border:1px black solid;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Student Page</h1>
+    {% if stu %}
+    <h1>Show Data</h1>
+    <h3>{{stu}}</h3><br>
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>StudId</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Password</th>
+        </tr>
+
+        {% for st in stu %}
+              
+        <tr>
+            <td>{{st.id}}</td>
+            <td>{{st.stuid}}</td>
+            <td>{{st.stuname}}</td>
+            <td>{{st.stuemail}}</td>
+            <td>{{st.stupass}} </td>
+        </tr>
+        {% endfor %}
+       
+       {% comment "" %}--- get unique data by its id (primary key) 
+        {% endcomment %}
+        <tr>
+            <td>{{ss.id}}**</td>
+            <td>{{ss.stuid}}</td>
+            <td>{{ss.stuname}}</td>
+            <td>{{ss.stuemail}}</td>
+            <td>{{ss.stupass}} </td>
+        </tr>
+   
+
+    {% else %}
+         <h1>No DataDatag</h1>
+    {% endif %}
+
+
+    </table>
+
+
+    
+</body>
+</html>

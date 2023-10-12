@@ -1,0 +1,47 @@
+{% extends "myapp/base.html" %}
+{% load static %}
+
+{% block content %}
+        
+
+<div class="container">
+    <h1 class="text-center mb-2 p-2">Major Cities </h1>
+       <div class="row">
+                <div class="col-sm-3">
+
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="{% static 'myapp/images/city/delhi.jpg' %} " alt="Card image cap">
+                        <div class="card-body">
+                        <h5 class="card-title">Delhi </h5>
+                        
+                        <a href="{% url 'lodge' %} " class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div> 
+                    
+                    
+            {% for ct in city  %}
+            
+            
+             <div class="col-sm-3">
+
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="{{ct.img.url}} " alt="Card image cap">
+                    <div class="card-body">
+                    <h5 class="card-title">{{ct.name}} </h5>
+                    
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+             </div> 
+
+             {% endfor %}
+
+
+
+             
+       </div>
+</div>
+
+
+{% endblock content %}      

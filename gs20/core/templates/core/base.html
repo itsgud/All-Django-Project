@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+ {% load static %} 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> {% block title %}other{% endblock title %} </title>
+<link rel="stylesheet" href=" {% static 'core/css/bootstrap.css' %} ">
+{% block corecss %}
+     <link rel="stylesheet" href=" {% static 'core/css/core.css' %} ">
+{% endblock corecss %}
+
+
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Django cpurse</li>
+        </ul>
+    </nav>
+    <script src=" {% static 'core/js/jquery.js' %} "></script>
+    <script src=" {% static 'core/js/propper.js' %} "></script>
+    <script src=" {% static 'core/js/bootstrap.min.js' %} "></script>
+    
+</body>
+</html>

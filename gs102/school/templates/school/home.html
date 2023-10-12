@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information</title>
+    <style>
+        table,th,tr,td{
+            border:1px solid black
+
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <h3>Student Information </h3>
+        <th>ID </th>
+        <th>Name </th>
+        <th>Age </th>
+        <th>Fees </th>
+        {% for student  in students  %}
+           <tr>
+              <td>{{student.id}} </td>
+              <td>{{student.name}} </td>
+              <td>{{student.age}} </td>
+              <td>{{student.fees}} </td>
+           </tr>
+        {% endfor %}
+    </table>
+
+    <table>
+        <h3>Teacher Information </h3>
+        <th>ID </th>
+        <th>Name </th>
+        <th>Age </th>
+        <th>Date </th>
+        <th>Salary </th>
+        {% for teacher   in teachers  %}
+           <tr>
+              <td>{{teacher.id}} </td>
+              <td>{{teacher.name}} </td>
+              <td>{{teacher.age}} </td>
+              <td>{{teacher.date}} </td>
+              <td>{{teacher.salary}} </td>
+           </tr>
+        {% endfor %}
+    </table>
+
+    <table>
+        <h3>Contractor Information </h3>
+        <th>ID </th>
+        <th>Name </th>
+        <th>Age </th>
+        <th>Date </th>
+        <th>Payment </th>
+
+        {% for ct   in contractors  %}
+           <tr>
+              <td>{{ct.id}} </td>
+              <td>{{ct.name}} </td>
+              <td>{{ct.age}} </td>
+              <td>{{ct.date}} </td>
+              <td>{{ct.payment}}</td>
+           </tr>
+        {% endfor %}
+    </table>
+
+    
+</body>
+</html>

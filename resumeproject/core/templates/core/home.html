@@ -1,0 +1,29 @@
+
+{% extends "core/base.html" %}
+{% load static %}
+
+{% block content %} 
+<div class=" mt-5 ">
+    <div class="text-center">
+        
+    <img src=" {% static 'core/images/alia.jpeg' %} " alt="profilepic"
+    srcset="" class='img-thumbnail' width="250px" height="150px">
+    
+    </div>
+     <div class=" mt-5 text-white mx-5 text-justify">
+        <h1 class="font-weight-bold st-font ">Hello,</h1>
+        <div class="px-4" style="line-height:2rem;">
+            <p style="text-indent:100px;" >
+                I've worked in software engineering for my entire 15-year career, and my commitment to critical thinking and attention to detail have gotten me to where I am today: a senior software engineer for First Technology. I have a passion for processes, and I'm an experienced team leader who typically manages 10 developers at any given time.
+
+                “Prior to my senior role, I worked as a software engineer for First Technology and a programmer for Mobile First. Because I've already held all the other positions in this field, I have keen insight into what it takes to run a successful project. My career goal is to move into management as a CTO, and I know this role would help me hone my leadership skills
+            </p>
+        </div>
+     </div>
+     <div class="text-center">
+        <a href=" {% url 'contact' %} " class="btn btn-outline-warning my-3 mr-5">Hire Me</a>
+        <a href=" {% url 'contact' %} " class="btn btn-outline-info my-3">Contact</a>
+     </div>
+     
+</div>             
+{% endblock content %}  

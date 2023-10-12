@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>User All Data </h3>
+    <table>
+        <th>username </th>
+        <th>first Name </th>
+        <th>Last name </th>
+        <th>Email </th>
+        {% for dt1 in data1  %}
+        <tr>
+            <td>{{dt1.username}} </td>
+            <td>{{dt1.first_name}} </td>
+            <td>{{dt1.last_name}} </td>
+            <td>{{dt1.email }} </td>
+        </tr>     
+        {% endfor %}
+    </table>
+
+
+    
+    <table>
+        <h3>User filtered by User email</h3>
+        <th>username </th>
+        <th>first Name </th>
+        <th>Last name </th>
+        <th>Email </th>
+        {% for dt1 in data2  %}
+        <tr>
+            <td>{{dt1.username}} </td>
+            <td>{{dt1.first_name}} </td>
+            <td>{{dt1.last_name}} </td>
+            <td>{{dt1.email }} </td>
+        </tr>     
+        {% endfor %}
+    </table>
+ 
+
+</body>
+</html>

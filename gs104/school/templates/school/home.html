@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <h3>Exam Center Information-Original</h3>
+        <th>Id </th>
+        <th>Exam Center Name </th>
+        <th>Center Name</th>
+        {% for center in centers %}
+         <tr>
+              <td>{{center.id}} </td>
+              <td>{{center.cname}} </td>
+              <td>{{center.city}} </td>
+         </tr>
+        
+        {% endfor %}
+    </table>
+
+    <table>
+        <h3>Exam Center Information-Proxy</h3>
+        <th>Id </th>
+        <th>Exam Center Name </th>
+        <th>Center Name</th>
+        {% for ct  in mycenters %}
+         <tr>
+              <td>{{ct.id}} </td>
+              <td>{{ct.cname}} </td>
+              <td>{{ct.city}} </td>
+         </tr>
+        
+        {% endfor %}
+    </table>
+
+</body>
+</html>
